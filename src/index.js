@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import YoutubeComponent from './component/YoutubeComponent/YoutubeComponent';
+import Home from './container/Home/Home.jsx';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Home />,
   document.getElementById('root')
 );
 

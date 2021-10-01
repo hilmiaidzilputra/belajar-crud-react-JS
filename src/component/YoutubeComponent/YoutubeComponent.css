@@ -1,0 +1,25 @@
+.yt-wrapper {
+  display: inline-block;
+  width: 210px;
+  box-sizing: border-box;
+  margin-right: 12px;
+}
+
+.image-thumb {
+  width: 250px;
+  height: 118px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-thumb img {
+  width: 100%;
+}
+
+.title {
+  margin-top: 1px;
+}
+
+.desc {
+  margin-top: 1px;
+}
