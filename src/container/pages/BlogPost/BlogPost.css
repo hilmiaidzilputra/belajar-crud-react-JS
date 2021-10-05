@@ -46,6 +46,10 @@
   color: #4a4a4a;
 }
 
+.content p:hover {
+  cursor: pointer;
+}
+
 .remove {
   padding: 12px 16px;
   background: rgb(255, 0, 0);

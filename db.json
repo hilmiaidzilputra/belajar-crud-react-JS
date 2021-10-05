@@ -599,6 +599,18 @@
       "title": "Test 1",
       "body": "Test 1",
       "userId": 1
+    },
+    {
+      "id": 1,
+      "title": "",
+      "body": "",
+      "userId": 1
+    },
+    {
+      "id": 1633408032493,
+      "title": "Test 2",
+      "body": "Test 2\n",
+      "userId": 1
     }
   ],
   "comments": [],

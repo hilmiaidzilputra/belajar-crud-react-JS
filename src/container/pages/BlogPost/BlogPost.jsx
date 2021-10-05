@@ -1,5 +1,5 @@
 import React from "react"
-import Post from "../../component/Post/Post"
+import Post from "../../../component/Post/Post"
 import './BlogPost.css'
 import axios from "axios"
 
@@ -91,6 +91,10 @@ class BlogPost extends React.Component {
         }
     }
 
+    handleDetail = (id) => {
+        this.props.history.push(`/detail-post/${id}`)
+    }
+
     componentDidMount(){
         // axios.get('http://localhost:3004/posts')
         // .then((result) => {
@@ -103,6 +107,8 @@ class BlogPost extends React.Component {
     render(){
         return(
             <div>
+                <p>Halaman Blog Post</p>
+                <hr />
                 <p className="section-title">Blog Post</p>
                 <div className="form-add-post">
                     <label htmlFor="title">Title</label>
@@ -113,7 +119,7 @@ class BlogPost extends React.Component {
                 </div>
                 {
                     this.state.post.map(post => {
-                        return <Post key={post.id} data={post} title={post.title} desc={post.body} remove={this.handleRemove} update={this.handleUpdate}/>
+                        return <Post key={post.id} data={post} title={post.title} desc={post.body} remove={this.handleRemove} update={this.handleUpdate} goDetail={this.handleDetail}/>
                     })
                 }
             </div>

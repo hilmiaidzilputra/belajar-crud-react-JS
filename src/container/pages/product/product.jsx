@@ -1,5 +1,5 @@
-import React from "react";
-import CardProduct from "../CardProduct/CardProduct";
+import React, {Fragment} from "react";
+import CardProduct from "./CardProduct/CardProduct";
 import './product.css'
 
 class Product extends React.Component{
@@ -15,6 +15,9 @@ class Product extends React.Component{
     
     render(){
         return(
+            <Fragment>
+            <p>Halaman Product</p>
+            <hr />
              <div>
                  <div className="header">
                     <div className="troley">
@@ -23,6 +26,7 @@ class Product extends React.Component{
                  </div>
                  <CardProduct onCounterChange={(value)=>this.handleOnCounterChange(value)}/>
              </div>
+            </Fragment>
         )
     }
 }
