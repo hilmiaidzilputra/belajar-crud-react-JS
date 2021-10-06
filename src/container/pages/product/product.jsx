@@ -16,15 +16,18 @@ class Product extends React.Component{
     render(){
         return(
             <Fragment>
-            <p>Halaman Product</p>
-            <hr />
-             <div>
-                 <div className="header">
-                    <div className="troley">
-                        <div className="count">{this.state.order}</div>
+            <div className="container mt-4">
+                <p>Halaman Product</p>
+                <hr />
+                    <div className="header">
+                        <div className="logo">
+                            <img src="https://i.pinimg.com/originals/87/86/9a/87869a840d94cc47c8356895585209a9.jpg" alt="logo" />
+                        </div>
+                        <div className="troley">
+                            <div className="count">{this.state.order}</div>
+                        </div>
                     </div>
-                 </div>
-                 <CardProduct onCounterChange={(value)=>this.handleOnCounterChange(value)}/>
+                    <CardProduct onCounterChange={(value)=>this.handleOnCounterChange(value)}/>
              </div>
             </Fragment>
         )

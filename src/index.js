@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import YoutubeComponent from './component/YoutubeComponent/YoutubeComponent';
 import Home from './container/Home/Home.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
     <Home />,

@@ -58,9 +58,11 @@ class LifeCycleComp extends React.Component{
         console.log('render')
         return(
             <Fragment>
+                <div className="container mt-4">
                 <p>Halaman Life Cycle Component</p>
                 <hr />
-                <button className="btn" onClick={this.changeCount}>Component Button {this.state.count}</button>
+                <button className="button" onClick={this.changeCount}>Component Button {this.state.count}</button>
+                </div>
             </Fragment>
         )
     }

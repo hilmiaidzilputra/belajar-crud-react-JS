@@ -106,7 +106,7 @@ class BlogPost extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div className="container mt-4">
                 <p>Halaman Blog Post</p>
                 <hr />
                 <p className="section-title">Blog Post</p>
@@ -115,7 +115,7 @@ class BlogPost extends React.Component {
                     <input type="text" name="title" value={this.state.formBlogPost.title} placeholder="Add Title" onChange={this.handleFormChange} />
                     <label htmlFor="body-content">Blog Content</label>
                     <textarea name="body" value={this.state.formBlogPost.body} id="body-content" cols="30" rows="10" placeholder="Add Blog Content" onChange={this.handleFormChange}></textarea>
-                    <button className="btn-submit" onClick={this.handleSubmit}>Simpan</button>
+                    <button className="btn-submit" onClick={this.handleSubmit}>{this.state.isUpdate ? "Update" : "Simpan"}</button>
                 </div>
                 {
                     this.state.post.map(post => {
