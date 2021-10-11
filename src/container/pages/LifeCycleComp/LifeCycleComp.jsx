@@ -25,11 +25,11 @@ class LifeCycleComp extends React.Component{
 
     shouldComponentUpdate (nextProps, nextState) {
         console.group('shouldComponentUpdate')
-        console.log('nextState',nextState);
+        console.log('nextState',nextState)
         console.log('this State:' , this.state)
         console.groupEnd();
 
-        if(nextState.count >= 4){
+        if(nextState.count >= 10){
             return false
         }
         return true;
@@ -61,7 +61,7 @@ class LifeCycleComp extends React.Component{
                 <div className="container mt-4">
                 <p>Halaman Life Cycle Component</p>
                 <hr />
-                <button className="button" onClick={this.changeCount}>Component Button {this.state.count}</button>
+                <button className="button btn-primary" onClick={this.changeCount}>Component Button {this.state.count}</button>
                 </div>
             </Fragment>
         )

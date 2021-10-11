@@ -1,0 +1,6 @@
+.kartu {
+  border-style: solid;
+  border-color: rgb(138, 177, 248);
+  border-radius: 10px;
+  cursor: pointer;
+}

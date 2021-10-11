@@ -1,6 +1,6 @@
-//Library
+//Libraries
 import React, {Fragment} from "react";
-import {BrowserRouter, Route, Link} from "react-router-dom";
+import {BrowserRouter, Route,} from "react-router-dom";
 
 //Pages
 import BlogPost from "../pages/BlogPost/BlogPost";
@@ -9,17 +9,17 @@ import Crud from "../pages/Crud";
 import LifeCycleComp from "../pages/LifeCycleComp/LifeCycleComp";
 import Product from "../pages/product/product";
 import YoutubeComponentPages from "../pages/YoutubeComponentPages/YoutubeComponent";
+import Tampilan from "../pages/KasirApp/Tampilan";
 
-//Style
+//Styles
 import "./Home.css";
 import {Navbar,Container,Nav,NavDropdown} from "react-bootstrap";
-
+import { Sukses } from "../pages/KasirApp/Components";
 
 class Home extends React.Component{
     state = {
         showComponent: true,
-        judul1 : "Blog Post",
-        judul2 : "CRUD",
+        linkYangdipilih : ""
     }
 
     componentDidMount () {
@@ -30,6 +30,7 @@ class Home extends React.Component{
 
 
     render(){
+        console.log(this.state.linkYangdipilih)
         return(
             <BrowserRouter>
             {/* <div>
@@ -51,19 +52,20 @@ class Home extends React.Component{
                 <BlogPost />
             </div> */}
             <Fragment>
-                <Navbar bg="dark" variant="dark" expand="lg">
+                <Navbar bg="primary" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">CRUD REACT JS</Navbar.Brand>
+                    <Navbar.Brand href="#">REACT JS</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className={ this.state.judul1, false  ==="Blog Post" ? "active" : ""} href="/">Blog Post</Nav.Link>
-                        <Nav.Link className={ this.state.judul2, false  ==="CRUD" ? "active" : ""} href="/crud">CRUD</Nav.Link>
-                        <Nav.Link href="/product">Product</Nav.Link>
-                        <Nav.Link href="/lifecycle">Life Cycle</Nav.Link>
-                        <Nav.Link href="/youtubecomp">Youtube Component</Nav.Link>
+                        <Nav.Link className="active" href="/">Blog Post</Nav.Link>
+                        <Nav.Link className="active" href="/kasirapp">Kasir APP</Nav.Link>
+                        <Nav.Link className="active" href="/crud">CRUD</Nav.Link>
+                        <Nav.Link className="active" href="/product">Product</Nav.Link>
+                        <Nav.Link className="active" href="/lifecycle">Life Cycle</Nav.Link>
+                        <Nav.Link className="active" href="/youtubecomp">Youtube Component</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                        <NavDropdown.Item  href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
@@ -73,12 +75,14 @@ class Home extends React.Component{
                     </Navbar.Collapse>
                 </Container>
                 </Navbar>
-            <Route path="/" exact component={BlogPost} />
+            <Route path="/" exact component={BlogPost}/>
             <Route path="/detail-post/:id" component={DetailPost} />
             <Route path="/product" component={Product} />
             <Route path="/lifecycle" component={LifeCycleComp} />
             <Route path="/youtubecomp" component={YoutubeComponentPages} />
             <Route path="/crud" component={Crud} />
+            <Route path="/kasirapp" component={Tampilan} />
+            <Route path="/sukses" component={Sukses} />
             </Fragment>
             </BrowserRouter>
         )

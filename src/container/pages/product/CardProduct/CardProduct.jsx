@@ -30,7 +30,7 @@ class CardProduct extends React.Component{
     }
     render(){
         return(
-            <div className="card">
+            <div className="card mb-5">
                 <div className="img-thumb-prod">
                     <img src="https://cf.shopee.co.id/file/9bd353cbbd4047666dff173138118a79" alt="card" />
                 </div>

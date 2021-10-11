@@ -14,15 +14,15 @@ const Formulir = ({nama, deskripsi, harga, handleChange, handleSubmit, id}) => {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="Email">
                         <Form.Label>Nama Makanan</Form.Label>
-                        <Form.Control type="text" name="nama" value={nama} onChange={(event) => handleChange(event)} />
+                        <Form.Control type="text" name="nama" value={nama} placeholder="Masukan Nama Makanan" onChange={(event) => handleChange(event)} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="Deskripsi">
                         <Form.Label>Deskripsi</Form.Label>
-                        <Form.Control as="textarea" name="deskripsi"  value={deskripsi} onChange={(event) => handleChange(event)} rows={3} />
+                        <Form.Control as="textarea" name="deskripsi"  value={deskripsi} placeholder="Masukan Deskripsi" onChange={(event) => handleChange(event)} rows={3} />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="Harga">
                         <Form.Label>Harga</Form.Label>
-                        <Form.Control type="number" name="harga"  value={harga} onChange={(event) => handleChange(event)} />
+                        <Form.Control type="number" name="harga"  value={harga} placeholder="Masukan Harga" onChange={(event) => handleChange(event)} />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Submit

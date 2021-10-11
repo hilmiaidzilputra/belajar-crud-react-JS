@@ -1,6 +1,6 @@
 import React from "react";
 import Formulir from "./Formulir";
-import NavbarComp from "./NavbarComp";
+// import NavbarComp from "./NavbarComp";
 import Table from "./Table";
 
 
